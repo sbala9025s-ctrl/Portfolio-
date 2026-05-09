@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BalaMurugan Tech Info</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg, #000000, #001f3f);
+    color:white;
+}
+
+/* Header */
+header{
+    text-align:center;
+    padding:40px 20px;
+    background: rgba(0,0,0,0.6);
+    border-bottom:2px solid #007bff;
+}
+
+header h1{
+    font-size:40px;
+    color:#00aaff;
+}
+
+header p{
+    font-size:18px;
+    margin-top:10px;
+    color:#ccc;
+}
+
+/* Quote */
+.quote{
+    text-align:center;
+    font-size:22px;
+    margin:20px;
+    color:#00d4ff;
+    font-weight:bold;
+}
+
+/* Tabs */
+.tabs{
+    display:flex;
+    justify-content:center;
+    margin-top:20px;
+    flex-wrap:wrap;
+}
+
+.tab-btn{
+    padding:12px 20px;
+    margin:5px;
+    border:none;
+    cursor:pointer;
+    background:#111;
+    color:white;
+    border:1px solid #007bff;
+    transition:0.3s;
+}
+
+.tab-btn:hover{
+    background:#007bff;
+}
+
+.tab-btn.active{
+    background:#007bff;
+}
+
+/* Sections */
+.section{
+    display:none;
+    padding:40px;
+    text-align:center;
+}
+
+.section.active{
+    display:block;
+}
+
+/* Cards */
+.card{
+    background:#111;
+    padding:20px;
+    margin:15px auto;
+    width:80%;
+    max-width:600px;
+    border-left:4px solid #00aaff;
+    border-radius:10px;
+}
+
+/* Contact */
+input, textarea{
+    width:80%;
+    padding:10px;
+    margin:10px;
+    border:none;
+    border-radius:5px;
+}
+
+button{
+    padding:10px 20px;
+    background:#007bff;
+    border:none;
+    color:white;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#0056b3;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>BalaMurugan Tech Info</h1>
+    <p>Modern Portfolio Website</p>
+</header>
+
+<div class="quote">
+    "உண்மை, உழைப்பு, உயர்வு"
+</div>
+
+<!-- Tabs -->
+<div class="tabs">
+    <button class="tab-btn active" onclick="showTab('about')">About</button>
+    <button class="tab-btn" onclick="showTab('skills')">Skills</button>
+    <button class="tab-btn" onclick="showTab('projects')">Projects</button>
+    <button class="tab-btn" onclick="showTab('contact')">Contact</button>
+</div>
+
+<!-- About -->
+<div id="about" class="section active">
+    <div class="card">
+        <h2>About Me</h2>
+        <p>
+            I am BalaMurugan, a passionate Tech enthusiast focused on web development, software solutions, and modern UI design.
+        </p>
+    </div>
+</div>
+
+<!-- Skills -->
+<div id="skills" class="section">
+    <div class="card">
+        <h2>Skills</h2>
+        <p>HTML, CSS, JavaScript</p>
+        <p>Python Basics</p>
+        <p>UI/UX Design</p>
+        <p>React (Learning)</p>
+    </div>
+</div>
+
+<!-- Projects -->
+<div id="projects" class="section">
+    <div class="card">
+        <h2>Projects</h2>
+        <p>✔ Portfolio Website</p>
+        <p>✔ Simple Calculator App</p>
+        <p>✔ Student Management System</p>
+    </div>
+</div>
+
+<!-- Contact -->
+<div id="contact" class="section">
+    <div class="card">
+        <h2>Contact Me</h2>
+        <input type="text" placeholder="Your Name"><br>
+        <input type="email" placeholder="Your Email"><br>
+        <textarea rows="4" placeholder="Message"></textarea><br>
+        <button>Send</button>
+    </div>
+</div>
+
+<script>
+function showTab(tab){
+    let sections = document.querySelectorAll(".section");
+    let buttons = document.querySelectorAll(".tab-btn");
+
+    sections.forEach(sec => sec.classList.remove("active"));
+    buttons.forEach(btn => btn.classList.remove("active"));
+
+    document.getElementById(tab).classList.add("active");
+    event.target.classList.add("active");
+}
+</script>
+
+</body>
+</html>
